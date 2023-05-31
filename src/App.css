@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+:root{
+    --tomato:  hsl(4, 100%, 67%);
+    --slate: hsl(234, 29%, 20%);
+    --charcoal: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    display: flex;
+    width: 950px;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 30px;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    width: 380px;
+}
+.description h1{
+    font-size: 55px;
+}
+.description p{
+    margin-top: 2rem;
+    line-height: 25px;
+}
+.description span{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.description img{
+    margin-right: 1rem;
+}
+.illustration{
+    margin-left: 5rem;
+}
+.illustration-mobile{
+    display: none;
+}
+.formulaire{
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.formulaire label{
+    color: var(--slate);
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: .5rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+form input{
+    padding: 1rem;
+    border-radius: 5px;
+    border:1px solid var(--grey);
+    outline: none;
+    font-size: 16px;
+}
+form button{
+    margin-top: 1rem;
+    border-radius: 5px;
+    background: var(--slate);
+    color: var(--white);
+    padding: 1rem;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+form button:hover{
+    background: linear-gradient(90deg, #ff5476 0%, #ff673e 100%);
+    box-shadow: 2px 7px 20px 1px #ff5e5b ;
+}
+.modal{
+    display: flex;
+    padding: 2rem;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.modal h2{
+    font-size: 55px;
+    text-align: left;
+    margin-top: 1rem;
+}
+.modal p{
+    margin-top: 1rem;
+    text-align: left;
+    line-height: 25px;
+}
+.modal button{
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    background: var(--slate);
+    color: var(--white);
+    cursor: pointer;
+}
+.modal button:hover{
+    background: linear-gradient(90deg, #ff5476 0%, #ff673e 100%);
+    box-shadow: 2px 7px 20px 1px #ff5e5b ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width: 970px){
+    .illustration-mobile{
+        display: block;
+    }
+    .illustration-desktop{
+        display: none;
+    }
+    .container{
+        flex-direction: column-reverse;
+        max-width: 375px;
+        padding: 0 0 2rem 0;
+    }
+    .illustration{
+        margin-left: 0;
+    }
+    .description{
+        width: auto;
+    }
+    .description h1{
+        font-size: 40px;
+        margin-top: -2rem;
+    }
+    .formulaire{
+        margin-left: 0;
+        margin: 2rem;
+    }
+    .modal{
+        margin-top: 7rem;
+        padding: 0;
+    }
+    .modal h2{
+        font-size: 40px;
+        margin-top: 3rem;
+    }
+    .modal button{
+        margin-top: 18rem;
+    }
+    .ReactModal__Content--after-open{
+        width: 383px !important;
+        height: 100vh !important;
+    }
 }
