@@ -1,6 +1,7 @@
 # Frontend Mentor - Newsletter sign-up form with success message
 
-![Design preview for the Newsletter sign-up form with success message coding challenge](./design/desktop-preview.jpg)
+
+![20230531094457](https://github.com/GuillaumeSere/newsletter-sign-up/assets/75996200/17ee2241-49e0-4019-bf89-f8fe2ceaa842)
 
 ## Welcome! 👋
 
